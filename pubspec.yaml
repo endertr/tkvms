@@ -1,0 +1,49 @@
+name: takvimm
+description: "A new Flutter project."
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  http: ^1.2.1
+  sqflite: ^2.3.3
+  path: ^1.9.0
+  intl: ^0.19.0
+  cupertino_icons: ^1.0.2
+  provider: ^6.1.2
+  flutter_native_splash: ^2.4.0
+  hijri: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/splash.png
+  android_12:
+    color: "#ffffff"
+    image: assets/splash.png
+
+flutter:
+  uses-material-design: true
+
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    - assets/
+    - assets/images/
+    # assets/ilceler dizini yoksa kaldırın veya oluşturun
+    # - assets/ilceler/

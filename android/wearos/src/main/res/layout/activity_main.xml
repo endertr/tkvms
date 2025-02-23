@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/box_inset_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Logo -->
+    <ImageView
+        android:layout_width="66dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        android:contentDescription="App Logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        app:boxedEdges="none">
+
+        <!-- Konum -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="3dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="Location Icon"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textColor="#40E0D0"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <!-- Mevcut Saat Bölümü -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/currentTimeHourMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/currentTimeSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/timeProgressBar"
+            style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+            android:layout_width="140dp"
+            android:layout_height="2dp"
+            android:progressDrawable="@drawable/horizontal_progress"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Sonraki Vakit Bilgisi -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nextPrayerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İkindi vaktine"
+            android:textColor="#40E0D0"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Kalan Süre -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/remainingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#40E0D0"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</androidx.wear.widget.BoxInsetLayout>
